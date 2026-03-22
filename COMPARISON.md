@@ -8,12 +8,15 @@ A capability comparison of ScienceClaw against LabClaw, Biomni (Stanford), and K
 
 | Capability | ScienceClaw | LabClaw | Biomni (Stanford) | K-Dense |
 |---|---|---|---|---|
-| **Total Skills/Tools** | 317 + ToolUniverse (1000+) | 240 SKILL.md files | 150 tools + 105 packages + 59 databases | 170+ skills + 250+ databases |
+| **Total Skills/Tools** | 317 + ToolUniverse (1000+) | 240 SKILL.md files | 150 tools + 105 packages + 59 databases | 177 skills + 250+ databases |
 | **Architecture** | Autonomous multi-agent with artifact DAG | 5-layer stack (PERSONA→HARDWARE) | LLM + retrieval-augmented planning + code execution | Hierarchical dual-loop multi-agent |
 | **Agent Coordination** | Emergent (pressure-based artifact reactor) | Scientific method loop + evolution engine | Single-agent with dynamic composition | Planning loop + execution loop with cross-verification |
 | **Persistence/Memory** | 3-tier (journal, tracker, knowledge graph) | 3-tier (Markdown, KG, Agent Blocks) | None documented | Not documented |
 | **Publication Platform** | Infinite (built-in) | None | Web UI (biomni.stanford.edu) | K-Dense Web (commercial) |
-| **License** | Open source | Apache 2.0 | Apache 2.0 | MIT (skills); commercial (platform) |
+| **Lab Hardware** | None (computational only) | Instrument connection + robotics | None | Opentrons, Ginkgo Cloud Lab |
+| **XR/Vision** | No | Egocentric hand tracking, AR/XR | No | No |
+| **Grant Writing** | No | NSF, NIH, DOE, DARPA templates | No | No |
+| **License** | Open source | Apache 2.0 / MIT | Apache 2.0 | MIT (skills); commercial (platform) |
 | **Backing** | Academic (lamm-mit) | Stanford-Princeton | Stanford/Genentech/Arc Institute | Biostate AI ($12M Series A, Accel) |
 
 ---
@@ -112,10 +115,10 @@ Python 3.12+, BioPython, RDKit, Scanpy, PyTorch, scikit-learn, PyMatGen, Qiskit,
 
 ## 4. K-Dense (Biostate AI)
 
-**What it is:** A multi-agent AI research system with an open-source skills collection (170+ skills) and a commercial platform. Developed by Biostate AI (Palo Alto, $12M Series A led by Accel, with Dario Amodei as angel investor).
+**What it is:** A multi-agent AI research system with an open-source skills collection (177 skills) and a commercial platform. Developed by Biostate AI (Palo Alto, $12M Series A led by Accel, with Dario Amodei as angel investor).
 
 ### Repositories
-1. **claude-scientific-skills** — 170+ skills, 5,700+ stars, 100k+ users. MIT licensed.
+1. **claude-scientific-skills** — 177 skills, 15,800+ stars. MIT licensed.
 2. **claude-scientific-writer** — Publication-ready papers, reports, posters, grant proposals
 3. **claude-skills-mcp** — MCP server for vector search skill discovery
 4. **agentic-data-scientist** — End-to-end data scientist agent (Google ADK + Claude Agent SDK)
@@ -137,7 +140,7 @@ Python 3.12+, BioPython, RDKit, Scanpy, PyTorch, scikit-learn, PyMatGen, Qiskit,
 - BixBench-Verified-50: 45/50
 
 ### Strengths vs. ScienceClaw
-- Largest community adoption (5,700+ stars, 100k+ users)
+- Largest community adoption (15,800+ stars)
 - Cross-platform portability (Cursor, Claude Code, Codex, Gemini CLI)
 - Lab automation integrations (Opentrons robotics, Ginkgo Cloud Lab)
 - Commercial backing and dedicated platform
@@ -149,11 +152,12 @@ Python 3.12+, BioPython, RDKit, Scanpy, PyTorch, scikit-learn, PyMatGen, Qiskit,
 - No emergent multi-agent coordination or artifact DAG
 - No persistent agent memory system
 - No built-in community/publication platform
-- Fewer total skills (170 vs. 317)
+- Fewer total skills (177 vs. 317)
 - No ToolUniverse integration (1000+ additional workflows)
-- No materials science or quantum computing coverage
-- Skills are static SKILL.md files, not executable tool wrappers with scripts
-- No gap detection or hypothesis generation engine
+- No materials science or quantum computing coverage (though has some via pymatgen, qiskit, cirq)
+- Skills are static SKILL.md files ("knowledge injection"), not executable tool wrappers with scripts
+- Has hypothesis generation (HypoGeniC) but no gap detection engine
+- Financial/SEC skills included but outside scientific scope
 
 ---
 
@@ -168,7 +172,7 @@ Python 3.12+, BioPython, RDKit, Scanpy, PyTorch, scikit-learn, PyMatGen, Qiskit,
 6. **Built-in collaboration** — Infinite platform for community-driven research
 
 ### Where ScienceClaw trails
-1. **Community adoption** — K-Dense has 100k+ users; ScienceClaw is earlier stage
+1. **Community adoption** — K-Dense has 15,800+ stars; ScienceClaw is earlier stage
 2. **Benchmarks** — Biomni and K-Dense have published, peer-reviewed benchmarks; ScienceClaw does not
 3. **Lab automation** — K-Dense integrates with physical lab robotics (Opentrons, Ginkgo); LabClaw connects to lab instruments
 4. **Cross-platform portability** — K-Dense skills work across Cursor, Claude Code, Codex, Gemini; ScienceClaw is self-contained
